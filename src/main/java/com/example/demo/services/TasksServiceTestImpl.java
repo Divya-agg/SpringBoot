@@ -1,24 +1,23 @@
 package com.example.demo.services;
 
+import com.example.demo.models.Task;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-import org.springframework.stereotype.Service;
-
-import com.example.demo.models.Task;
-
 @Service
-public class TasksServiceImpl implements TasksService{
+public class TasksServiceTestImpl implements TasksService{
 
 	private final ArrayList<Task> taskList;
-	
-	public TasksServiceImpl() {
+
+	public TasksServiceTestImpl() {
 		taskList=new ArrayList<>();
-		taskList.add(new Task(1,"sample task",false,new Date()));
-		taskList.add(new Task(2,"another task",false,new Date()));
-		taskList.add(new Task(3,"more task",false,new Date()));
+		taskList.add(new Task(1,"Test task 1",false,new Date()));
+		taskList.add(new Task(2,"Test task 2",false,new Date()));
+		taskList.add(new Task(3,"Test task 3",false,new Date()));
 	}
 
 	@Override
