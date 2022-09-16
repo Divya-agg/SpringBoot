@@ -28,7 +28,7 @@ public class TasksServiceImpl implements TasksService{
 
 	@Override
 	public Task getTaskById(int id) {
-		AtomicReference<Task> task=null;
+		AtomicReference<Task> task=new AtomicReference<>();
 		taskList.forEach(t->{
 			if(t.getId()==id){
 				task.set(t);}
